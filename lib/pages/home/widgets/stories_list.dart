@@ -8,14 +8,21 @@ class StoriesList extends StatelessWidget {
     final mobile = ResponsiveWrapper.of(context).isMobile;
 
     return Container(
-      margin: EdgeInsets.symmetric(vertical: mobile ? 15 : 35),
-      height: 110,
-      child: ListView.separated(
-        separatorBuilder: (_, __) => const SizedBox(width: 16),
-        scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        itemCount: 20,
-        itemBuilder: (_, index) => StoryCircle(),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.grey),
+        color: Colors.black,
+      ),
+      margin: EdgeInsets.only(top: mobile ? 15 : 30, bottom: mobile ? 0 : 20),
+      height: 100,
+      child: ScrollConfiguration(
+        behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+        child: ListView.separated(
+          scrollDirection: Axis.horizontal,
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          separatorBuilder: (_, __) => const SizedBox(width: 16),
+          itemCount: 18,
+          itemBuilder: (_, index) => StoryCircle(),
+        ),
       ),
     );
   }
