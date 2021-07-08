@@ -20,12 +20,16 @@ class HomePage extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                child: ListView(
-                  children: [
-                    StoriesList(),
-                    PostWidget(),
-                    PostWidget(),
-                  ],
+                child: ScrollConfiguration(
+                  behavior: ScrollConfiguration.of(context)
+                      .copyWith(scrollbars: false),
+                  child: ListView(
+                    children: [
+                      StoriesList(),
+                      PostWidget(),
+                      PostWidget(),
+                    ],
+                  ),
                 ),
               ),
               RightPanel(),
