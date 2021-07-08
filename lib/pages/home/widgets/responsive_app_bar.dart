@@ -56,11 +56,18 @@ class ResponsiveAppBar extends StatelessWidget {
                           SizedBox(width: 4),
                           Expanded(
                             child: TextField(
-                              style:
-                                  TextStyle(fontSize: 14, color: Colors.white),
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: Colors.white,
+                              ),
                               decoration: InputDecoration(
                                 border: InputBorder.none,
                                 isCollapsed: true,
+                                hintText: 'Pesquisar',
+                                hintStyle: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 13,
+                                ),
                               ),
                             ),
                           ),
