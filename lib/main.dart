@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_home_page/pages/home/home_page.dart';
+import 'package:instagram_home_page/themes/custom_color.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Instagram',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: white,
       ),
       builder: (context, widget) => ResponsiveWrapper.builder(
         ClampingScrollWrapper.builder(context, widget!),
