@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
 class StoryCircle extends StatelessWidget {
+  final bool isPostWidget;
+
+  const StoryCircle({this.isPostWidget = false});
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          height: 64,
-          width: 64,
+          height: isPostWidget ? 40 : 62,
+          width: isPostWidget ? 40 : 62,
           alignment: Alignment.center,
           margin: const EdgeInsets.only(bottom: 2),
           decoration: BoxDecoration(
@@ -23,27 +27,28 @@ class StoryCircle extends StatelessWidget {
           ),
           child: Container(
             alignment: Alignment.center,
-            height: 60,
-            width: 60,
+            height: isPostWidget ? 36 : 58,
+            width: isPostWidget ? 36 : 58,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: Colors.black,
             ),
             child: CircleAvatar(
-              radius: 26,
+              radius: isPostWidget ? 16 : 26,
               backgroundImage: NetworkImage(
                 'https://avatars.githubusercontent.com/u/56166862?v=4',
               ),
             ),
           ),
         ),
-        Text(
-          'Prioli',
-          style: TextStyle(
-            fontSize: 12,
-            color: Colors.white,
+        if (!isPostWidget)
+          Text(
+            'Prioli',
+            style: TextStyle(
+              fontSize: 12,
+              color: Colors.white,
+            ),
           ),
-        ),
       ],
     );
   }
