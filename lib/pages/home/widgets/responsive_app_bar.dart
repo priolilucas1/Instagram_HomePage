@@ -18,7 +18,7 @@ class ResponsiveAppBar extends StatelessWidget {
                 child: MouseRegion(
                   cursor: SystemMouseCursors.click,
                   child: Text(
-                    'Flutter',
+                    'Instagram',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 30,
