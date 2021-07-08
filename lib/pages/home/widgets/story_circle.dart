@@ -6,16 +6,16 @@ class StoryCircle extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 66,
-          width: 66,
+          height: 64,
+          width: 64,
           alignment: Alignment.center,
           margin: const EdgeInsets.only(bottom: 2),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             gradient: LinearGradient(
               colors: [
-                Colors.blue,
-                Colors.green,
+                Color.fromARGB(255, 255, 20, 147),
+                Colors.orange,
               ],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
