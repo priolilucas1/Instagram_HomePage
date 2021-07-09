@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
       body: Align(
         alignment: Alignment.topCenter,
         child: ConstrainedBox(
-          constraints: BoxConstraints(maxWidth: 1000),
+          constraints: BoxConstraints(maxWidth: 950),
           child: Row(
             children: [
               Expanded(
