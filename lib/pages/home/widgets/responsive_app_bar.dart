@@ -40,9 +40,9 @@ class ResponsiveAppBar extends StatelessWidget {
                       width: 200,
                       height: 30,
                       decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.white,
-                        ),
+                        border: Border.all(color: Colors.grey.shade700),
+                        borderRadius: BorderRadius.all(Radius.circular(2)),
+                        color: Colors.grey[900],
                       ),
                       padding: const EdgeInsets.only(left: 4),
                       alignment: Alignment.centerLeft,

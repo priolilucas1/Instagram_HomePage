@@ -9,11 +9,12 @@ class StoriesList extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey),
+        border: Border.all(color: Colors.grey.shade600),
         color: Colors.black,
+        borderRadius: BorderRadius.all(Radius.circular(5)),
       ),
-      margin: EdgeInsets.only(top: mobile ? 15 : 30, bottom: mobile ? 0 : 20),
-      height: 100,
+      margin: EdgeInsets.only(top: mobile ? 15 : 30, bottom: 20),
+      height: 120,
       child: ScrollConfiguration(
         behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
         child: ListView.separated(

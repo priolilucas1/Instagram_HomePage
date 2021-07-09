@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:instagram_home_page/pages/home/widgets/comments_field.dart';
 import 'package:instagram_home_page/pages/home/widgets/story_circle.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -13,8 +14,9 @@ class PostWidget extends StatelessWidget {
       child: Container(
         decoration: desktop
             ? BoxDecoration(
-                border: Border.all(color: Colors.grey),
+                border: Border.all(color: Colors.grey.shade600),
                 color: Colors.black,
+                borderRadius: BorderRadius.all(Radius.circular(5)),
               )
             : null,
         child: Column(
@@ -49,53 +51,53 @@ class PostWidget extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             Padding(
-              padding: const EdgeInsets.all(4),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     children: [
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: Icon(
                           Icons.favorite_border,
                           color: Colors.white,
+                          size: 24,
                         ),
-                        iconSize: 24,
                       ),
-                      SizedBox(width: 4),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.messenger_outlined,
+                      SizedBox(width: 14),
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: Icon(
+                          FontAwesomeIcons.comment,
                           color: Colors.white,
+                          size: 24,
                         ),
-                        iconSize: 24,
                       ),
-                      SizedBox(width: 4),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.send,
+                      SizedBox(width: 14),
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: Icon(
+                          FontAwesomeIcons.paperPlane,
                           color: Colors.white,
+                          size: 20,
                         ),
-                        iconSize: 24,
                       ),
                     ],
                   ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
+                  MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: Icon(
                       Icons.bookmark_border,
                       color: Colors.white,
+                      size: 24,
                     ),
-                    iconSize: 24,
                   ),
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 16, bottom: 16),
+              padding: const EdgeInsets.only(left: 16, bottom: 4),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -155,7 +157,7 @@ class PostWidget extends StatelessWidget {
                 thickness: 0.2,
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 12),
+                padding: const EdgeInsets.only(bottom: 4),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
