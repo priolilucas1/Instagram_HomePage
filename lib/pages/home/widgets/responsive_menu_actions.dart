@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_framework/responsive_framework.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ResponsiveMenuActions extends StatelessWidget {
   @override
@@ -7,36 +7,68 @@ class ResponsiveMenuActions extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        ResponsiveVisibility(
-          visible: false,
-          visibleWhen: [
-            Condition.smallerThan(name: TABLET),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.home,
+            color: Colors.white,
+            size: 26,
+          ),
+        ),
+        SizedBox(width: 4),
+        Stack(
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                FontAwesomeIcons.facebookMessenger,
+                color: Colors.white,
+                size: 20,
+              ),
+            ),
+            Positioned(
+              top: 4,
+              right: 2,
+              child: Container(
+                alignment: Alignment.center,
+                width: 18,
+                height: 18,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.red,
+                ),
+                child: Text(
+                  '1',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+            ),
           ],
-          child: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.search),
+        ),
+        SizedBox(width: 4),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(
+            FontAwesomeIcons.compass,
+            color: Colors.white,
+            size: 20,
           ),
         ),
         SizedBox(width: 4),
         IconButton(
           onPressed: () {},
-          icon: Icon(Icons.home),
+          icon: Icon(
+            Icons.favorite_border,
+            color: Colors.white,
+            size: 20,
+          ),
         ),
-        SizedBox(width: 4),
-        IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.send),
-          iconSize: 20,
-        ),
-        SizedBox(width: 4),
-        IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.favorite_border),
-          iconSize: 20,
-        ),
-        SizedBox(width: 16),
+        SizedBox(width: 14),
         CircleAvatar(
-          radius: 16,
+          radius: 14,
           backgroundImage: NetworkImage(
             'https://avatars.githubusercontent.com/u/56166862?v=4',
           ),
