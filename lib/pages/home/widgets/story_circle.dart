@@ -42,14 +42,18 @@ class StoryCircle extends StatelessWidget {
             ),
           ),
         ),
-        if (!isPostWidget)
+        if (!isPostWidget) ...[
+          SizedBox(
+            height: 3,
+          ),
           Text(
-            'Prioli',
+            'lucasprioli1',
             style: TextStyle(
-              fontSize: 12,
+              fontSize: 11,
               color: Colors.white,
             ),
           ),
+        ]
       ],
     );
   }

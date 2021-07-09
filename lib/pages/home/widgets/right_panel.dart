@@ -12,16 +12,16 @@ class RightPanel extends StatelessWidget {
         Condition.largerThan(name: TABLET),
       ],
       child: Container(
-        margin: const EdgeInsets.fromLTRB(20, 56, 20, 0),
+        margin: const EdgeInsets.fromLTRB(15, 44, 20, 0),
         width: 300,
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 12),
               child: Row(
                 children: [
                   CircleAvatar(
-                    radius: 29,
+                    radius: 28,
                     backgroundImage: NetworkImage(
                       'https://avatars.githubusercontent.com/u/56166862?v=4',
                     ),
@@ -66,10 +66,10 @@ class RightPanel extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 24,
+              height: 10,
             ),
             Container(
-              color: Colors.black,
+              color: Colors.black54,
               padding: const EdgeInsets.all(12),
               child: Column(
                 children: [
